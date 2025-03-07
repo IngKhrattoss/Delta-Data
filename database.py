@@ -12,4 +12,4 @@ def init_db(app):
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
-    print(f"📂 Base de datos usada: {app.config['SQLALCHEMY_DATABASE_URI']}")  # Este print nos ayuda a verificar la ruta de nuestra BD
+    print(f"La ruta de la base de datos es: {app.config['SQLALCHEMY_DATABASE_URI']}")  # Este print nos ayuda a verificar la ruta de nuestra BD

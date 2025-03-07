@@ -56,6 +56,21 @@
             let today = new Date().toISOString().split("T")[0];
             document.getElementById("date").value = today;
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionamos los campos de entrada que deben bloquear la 'e'
+    const camposNumericos = document.querySelectorAll("#monto, #ti, #plazo");
+
+    camposNumericos.forEach(function (campo) {
+        // Evitar que el usuario escriba 'e' o 'E'
+        campo.addEventListener("keydown", function (event) {
+            if (event.key === "e" || event.key === "E") {
+                event.preventDefault();
+            }
+        });
+
+    });
+});
     </script>
 
         
